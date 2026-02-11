@@ -8,6 +8,7 @@
       C=(2*3.14*R);
    printf(" circumference of circle %f",C);
       A=(3.14*R*R);
-   printf("area of circle is %f",A); 
+   printf("area of circle is %f",A); asd
    return 0;
+
    }
