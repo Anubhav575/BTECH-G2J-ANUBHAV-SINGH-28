@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+   int i,n,odd=0,even=0;
+   printf("enter the no\n");
+   scanf("%d",&n);
+   for (i=1;i<=n;i++)
+   {
+    if(i%2==0)
+    {
+    even=even+i;
+    }
+    else
+    {
+    odd=odd+i;
+    }
+    
+   }
+   printf("sum of n odd no is%d\n",odd);
+   printf("sum of n even no is%d",even);
+   return 0;
+}
