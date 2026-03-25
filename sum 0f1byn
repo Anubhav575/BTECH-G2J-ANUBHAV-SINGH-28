@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    // It's better to use float or double for division results
+    int i, n;
+    // Initialize sum to 0.0 for float calculation
+    float sum = 0.0;
+
+    printf("enter the number ");
+    // The scanf function requires the address-of operator (&) for n
+    if (scanf("%d", &n) != 1 || n <= 0) {
+        printf("Invalid input or n is not positive.\n");
+        return 1; // Exit if input is invalid
+    }
+
+    for (i = 1; i <= n; i++) {
+        // Use 1.0/n to ensure floating-point division
+        sum = sum + (1.0 / n);
+    }
+
+    // Use %f for printing a float value
+    printf("The sum of the series is %f\n", sum);
+
+    return 0;
+}
