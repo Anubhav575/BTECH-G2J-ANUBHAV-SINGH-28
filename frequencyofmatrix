@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    int a[50][50], n, i, j, k, l, count;
+    int visited[50][50] = {0};
+
+    printf("Enter order of matrix: ");
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++) {
+        for(j = 0; j < n; j++) {
+            printf("a[%d][%d] = ", i, j);
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    printf("\nFrequency Table:\n");
+    for(i = 0; i < n; i++) {
+        for(j = 0; j < n; j++) {
+
+            count = 1;
+            for(k = 0; k < n; k++) {
+                for(l = 0; l < n; l++) {
+                    
+                    if((i != k || j != l) && a[i][j] == a[k][l]) {
+                        count++;
+                       
+                    }
+                }
+            }
+            printf("Element %d occurs %d times\n", a[i][j], count);
+        }
+        return 0;
+    }
+
+    return 0;
+}
